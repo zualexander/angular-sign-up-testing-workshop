@@ -1,9 +1,11 @@
-<h1>
-  {{title}}
-</h1>
-
-<button routerLink="/sign-up">Sign-up</button>
-<button routerLink="/users">Subscribers</button>
-<button routerLink="">Home</button>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Custom Toolbar</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="">Home</button>
+    <button mat-button routerLink="/sign-up">Sign-up</button>
+    <button mat-button routerLink="/users">Subscribers</button>
+  </mat-toolbar-row>
+</mat-toolbar>
 
 <router-outlet></router-outlet>
