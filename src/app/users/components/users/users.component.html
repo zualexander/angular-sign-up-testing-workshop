@@ -1,3 +1,5 @@
-<p>
-  users works!
-</p>
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let user of users">{{user.email}}</mat-list-item>
+</mat-list>
+
+<app-incrementer [counter]="counter" (newValue)="handleCounterUpdate($event)"></app-incrementer>
