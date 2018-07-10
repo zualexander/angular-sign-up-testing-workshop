@@ -12,7 +12,7 @@ export class UsersComponent implements OnInit, OnDestroy {
 
   public users: User[];
   public subscription: Subscription;
-  public counter: number = 55;
+  public counter: number = 0;
 
   constructor(private _facade: UserFacadeService) {
   }
@@ -20,6 +20,12 @@ export class UsersComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this._facade.getUserList()
       .subscribe((users) => this.users = users);
+
+    setTimeout(() => {
+      if (this.counter < 3) {
+        this.counter = 10;
+      }
+    }, 2000);
   }
 
   ngOnDestroy() {
